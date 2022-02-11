@@ -1,4 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
+//Developer routes
+import DevDetails from './pages/developers/DevDetails.vue';
+import DevsList from './pages/developers/DevsList.vue';
+import DevRegistration from './pages/developers/DevRegistration.vue';
+
+//Requests routes
+import ContactDev from './pages/requests/ContactDev.vue';
+import RequestsReceived from './pages/requests/RequestsReceived.vue';
 
 const routes = [
   {
@@ -7,25 +15,25 @@ const routes = [
   },
   {
     path: '/developers',
-    component: null,
+    component: DevsList,
   },
   {
     path: '/developers/:id',
-    component: null,
+    component: DevDetails,
     children: [
       {
         path: '/contact',
-        component: null, // (/developers/:id/contact)
+        component: ContactDev, // (/developers/:id/contact)
       },
     ],
   },
   {
     path: '/register',
-    component: null,
+    component: DevRegistration,
   },
   {
     path: '/requests',
-    component: null,
+    component: RequestsReceived,
   },
   {
     path: '/:notFound(.*)',
