@@ -8,6 +8,9 @@ import DevRegistration from './pages/developers/DevRegistration.vue';
 import ContactDev from './pages/requests/ContactDev.vue';
 import RequestsReceived from './pages/requests/RequestsReceived.vue';
 
+//Not found
+import NotFound from './pages/NotFound.vue';
+
 const routes = [
   {
     path: '/',
@@ -37,7 +40,7 @@ const routes = [
   },
   {
     path: '/:notFound(.*)',
-    component: null,
+    component: NotFound,
   },
 ];
 
