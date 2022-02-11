@@ -2,3 +2,19 @@
   <!-- component matched by the route will render here -->
   <router-view></router-view>
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
