@@ -21,7 +21,7 @@ header {
 }
 
 header a {
-  color: #c2edf3;
+  color: #c7e8ec;
   display: inline-block;
   padding: 0.75rem 1.2rem;
   border: 1px solid transparent;
