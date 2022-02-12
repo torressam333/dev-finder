@@ -32,7 +32,7 @@ a:active,
 a:hover,
 a.router-link-active {
   border-radius: 0.2rem;
-  border: 1px solid #faf5d7;
+  border-bottom: 1px solid #faf5d7;
   color: #fff;
   padding: 0.5rem 0.75rem;
 }
