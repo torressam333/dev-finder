@@ -25,7 +25,7 @@ const routes = [
     component: DevDetails,
     children: [
       {
-        path: '/contact',
+        path: 'contact',
         component: ContactDev, // (/developers/:id/contact)
       },
     ],
