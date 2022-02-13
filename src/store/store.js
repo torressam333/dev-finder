@@ -6,6 +6,6 @@ import developerModule from './modules/developers/main.js';
 
 export default createStore({
   modules: {
-    developerModule,
+    developers: developerModule,
   },
 });

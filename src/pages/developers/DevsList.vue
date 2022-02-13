@@ -6,10 +6,23 @@
       <button>Refresh List</button>
       <router-link to="/register">Developer Registration</router-link>
     </div>
-    <ul></ul>
+    <ul v-if="hasDevelopers">
+      <li v-for="dev in filteredDevelopers" :key="dev.id">
+        {{ dev.firstName }} {{ dev.lastName }}
+      </li>
+    </ul>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    filteredDevelopers() {
+      return this.$store.getters['developers/getAllDevelopers'];
+    },
+    hasDevelopers() {
+      return this.$store.getters['developers/hasDevelopers'];
+    },
+  },
+};
 </script>
