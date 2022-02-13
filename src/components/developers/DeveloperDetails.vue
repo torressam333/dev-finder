@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 li {
-  border: 1px solid #424242;
+  border: 2px solid rgb(168, 164, 164);
   border-radius: 10px;
   margin: 2rem;
   padding: 1rem;
