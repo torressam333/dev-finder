@@ -6,8 +6,8 @@
       <span v-for="area in areas" :key="area">{{ area }}</span>
     </div>
     <div class="actions">
-      <router-link to="/developers/dev1/contact">Conact Dev</router-link>
-      <router-link to="/developers/dev1">View Details</router-link>
+      <router-link :to="devContactLink">Conact Dev</router-link>
+      <router-link :to="devDetailsLink">View Details</router-link>
     </div>
   </li>
 </template>
@@ -31,6 +31,12 @@ export default {
     };
   },
   computed: {
+    devContactLink() {
+      return `/developers/${this.id}/contact`;
+    },
+    devDetailsLink() {
+      return `/developers/${this.id}`;
+    },
     devFullName() {
       return `${this.firstName} ${this.lastName}`;
     },
