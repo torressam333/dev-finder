@@ -11,6 +11,7 @@
         {{ dev.firstName }} {{ dev.lastName }}
       </li>
     </ul>
+    <h4 v-else>No Developers Found</h4>
   </section>
 </template>
 
