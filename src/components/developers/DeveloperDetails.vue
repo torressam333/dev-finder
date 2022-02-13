@@ -51,7 +51,6 @@ export default {
 li {
   border: 1px solid #424242;
   border-radius: 10px;
-  padding: 1rem;
   margin: 2rem;
   padding: 1rem;
 }
