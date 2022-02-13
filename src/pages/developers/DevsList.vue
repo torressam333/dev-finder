@@ -33,3 +33,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+section {
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+}
+</style>

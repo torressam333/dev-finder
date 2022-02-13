@@ -17,6 +17,7 @@ header {
   display: flex;
   height: 4.5rem;
   justify-content: center;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -71,5 +72,6 @@ header ul {
 
 li {
   margin: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 </style>
