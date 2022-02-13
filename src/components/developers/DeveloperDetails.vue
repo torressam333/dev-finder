@@ -12,4 +12,59 @@
   </li>
 </template>
 
-<style scoped></style>
+<script>
+export default {
+  props: {
+    devDetails: {
+      type: Object,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      areas: this.devDetails.areas,
+      description: this.devDetails.description,
+      firstName: this.devDetails.firstName,
+      hourlyRate: this.devDetails.hourlyRate,
+      id: this.devDetails.id,
+      lastName: this.devDetails.lastName,
+    };
+  },
+  computed: {
+    devFullName() {
+      return `${this.firstName} ${this.lastName}`;
+    },
+    devRate() {
+      return `${this.hourlyRate}`;
+    },
+  },
+};
+</script>
+
+<style scoped>
+li {
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4 {
+  margin: 0.5rem 0;
+}
+
+div {
+  margin: 0.5rem 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+</style>

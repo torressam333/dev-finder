@@ -7,16 +7,22 @@
       <router-link to="/register">Developer Registration</router-link>
     </div>
     <ul v-if="hasDevelopers">
-      <li v-for="dev in filteredDevelopers" :key="dev.id">
-        {{ dev.firstName }} {{ dev.lastName }}
-      </li>
+      <developer-details
+        v-for="dev in filteredDevelopers"
+        :key="dev.id"
+        :dev-details="dev"
+      ></developer-details>
     </ul>
     <h4 v-else>No Developers Found</h4>
   </section>
 </template>
 
 <script>
+import DeveloperDetails from '../../components/developers/DeveloperDetails.vue';
 export default {
+  components: {
+    DeveloperDetails,
+  },
   computed: {
     filteredDevelopers() {
       return this.$store.getters['developers/getAllDevelopers'];
