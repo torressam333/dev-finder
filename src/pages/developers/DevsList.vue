@@ -39,4 +39,15 @@ section {
   margin: 0.5rem;
   padding: 0 0.5rem;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
 </style>
