@@ -32,10 +32,10 @@ export default {
   },
   computed: {
     devContactLink() {
-      return `/developers/${this.id}/contact`;
+      return `${this.$route.path}/${this.id}/contact`;
     },
     devDetailsLink() {
-      return `/developers/${this.id}`;
+      return `${this.$route.path}/${this.id}`;
     },
     devFullName() {
       return `${this.firstName} ${this.lastName}`;
