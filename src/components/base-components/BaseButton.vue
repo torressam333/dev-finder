@@ -40,7 +40,7 @@ a {
   cursor: pointer;
   display: inline-block;
   font: inherit;
-  padding: 0.75rem 1.5rem;
+  padding: 0.55rem 1.2rem;
   margin-right: 0.5rem;
   text-decoration: none;
 }
@@ -49,8 +49,9 @@ a:hover,
 a:active,
 button:hover,
 button:active {
-  background-color: #02506e;
-  border-color: #02506e;
+  background-color: #00658d;
+  border-color: #00658d;
+  color: white;
 }
 
 .flat {
@@ -69,6 +70,7 @@ button:active {
 .flat:active,
 .outline:hover,
 .outline:active {
-  background-color: #56a8c9;
+  background-color: #00658d;
+  color: white;
 }
 </style>

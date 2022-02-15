@@ -4,5 +4,6 @@
         has child routes    
      -->
   <router-view></router-view>
-  <router-link to="/developers/1/contact">Contact Dev</router-link>
+  <base-button link to="/developers/1/contact">Contact Dev</base-button>
+  <base-button link to="/developers/1/contact">Contact Dev</base-button>
 </template>

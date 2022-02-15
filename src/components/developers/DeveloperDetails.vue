@@ -6,14 +6,16 @@
       <span v-for="area in areas" :key="area">{{ area }}</span>
     </div>
     <div class="actions">
-      <router-link :to="devContactLink">Conact Dev</router-link>
-      <router-link :to="devDetailsLink">View Details</router-link>
+      <base-button mode="outline" :to="devContactLink">Conact Dev</base-button>
+      <base-button :to="devDetailsLink">View Details</base-button>
     </div>
   </li>
 </template>
 
 <script>
+import BaseButton from '../base-components/BaseButton.vue';
 export default {
+  components: { BaseButton },
   props: {
     devDetails: {
       type: Object,
@@ -71,5 +73,17 @@ div {
 .actions {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+  .actions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .actions button {
+    margin: 0.25rem 0;
+  }
 }
 </style>

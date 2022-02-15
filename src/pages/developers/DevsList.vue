@@ -3,8 +3,8 @@
   <section>
     <base-card>
       <div class="controls">
-        <button>Refresh List</button>
-        <router-link to="/register">Developer Registration</router-link>
+        <base-button mode="outline">Refresh List</base-button>
+        <base-button link to="/register">Developer Registration</base-button>
       </div>
       <ul v-if="hasDevelopers">
         <developer-details
@@ -19,10 +19,12 @@
 </template>
 
 <script>
+import BaseButton from '../../components/base-components/BaseButton.vue';
 import DeveloperDetails from '../../components/developers/DeveloperDetails.vue';
 export default {
   components: {
     DeveloperDetails,
+    BaseButton,
   },
   computed: {
     filteredDevelopers() {
