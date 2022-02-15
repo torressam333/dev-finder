@@ -3,7 +3,12 @@
     <h3>{{ devFullName }}</h3>
     <h4>${{ devRate }} per hour</h4>
     <div>
-      <span v-for="area in areas" :key="area">{{ area }}</span>
+      <base-badge
+        v-for="area in areas"
+        :key="area"
+        :specialty="area"
+        :title="area"
+      ></base-badge>
     </div>
     <div class="actions">
       <base-button mode="outline" :to="devContactLink">Conact Dev</base-button>
@@ -13,9 +18,10 @@
 </template>
 
 <script>
+import BaseBadge from '../base-components/BaseBadge.vue';
 import BaseButton from '../base-components/BaseButton.vue';
 export default {
-  components: { BaseButton },
+  components: { BaseBadge, BaseButton },
   props: {
     devDetails: {
       type: Object,
@@ -69,7 +75,6 @@ h4 {
 div {
   margin: 0.5rem 0;
 }
-
 .actions {
   display: flex;
   justify-content: flex-end;
