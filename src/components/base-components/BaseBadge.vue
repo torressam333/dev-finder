@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     titleUpper() {
-      return this.title.toUpperCase();
+      return this.title && this.title.toUpperCase();
     },
   },
 };
