@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-//Developer routes
+//Developer routes (pages)
 import DevDetails from './pages/developers/DevDetails.vue';
 import DevsList from './pages/developers/DevsList.vue';
 import DevRegistration from './pages/developers/DevRegistration.vue';
@@ -23,6 +23,8 @@ const routes = [
   {
     path: '/developers/:id',
     component: DevDetails,
+    // https://router.vuejs.org/guide/essentials/passing-props.html
+    props: true,
     children: [
       {
         path: 'contact',
