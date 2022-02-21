@@ -7,12 +7,14 @@
     </base-card>
   </section>
   <section>
-    <header>
-      <h2>Want to connect? Reach out now!</h2>
-      <base-button link :to="devContactLink">Contact</base-button>
-    </header>
-    <!-- router link required for child form (contact form) to be rendered -->
-    <router-view></router-view>
+    <base-card>
+      <header>
+        <h2>Want to connect? Reach out now!</h2>
+        <base-button link :to="devContactLink">Contact</base-button>
+      </header>
+      <!-- router link required for child form (contact form) to be rendered -->
+      <router-view></router-view>
+    </base-card>
   </section>
   <section>
     <base-card>
@@ -29,6 +31,7 @@
 
 <script>
 export default {
+  name: 'DevDetails',
   props: {
     id: {
       type: String,
@@ -62,9 +65,9 @@ export default {
   },
   created() {
     //Find dev by id from vuex stroe when this component is created
-    this.selectedDev = this.$store
-      .getters('developers/getAllDevelopers')
-      .find((dev) => dev.id === this.id);
+    this.selectedDev = this.$store.getters['developers/getAllDevelopers'].find(
+      (dev) => dev.id === this.id
+    );
     //this.selectedDev = this.$store.getters.getDeveloperById(this.id);
   },
 };

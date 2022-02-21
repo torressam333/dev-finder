@@ -1,5 +1,4 @@
 <template>
-  <section>Filter Comp Goes Here</section>
   <section>
     <base-card>
       <div class="controls">
