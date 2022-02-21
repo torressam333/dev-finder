@@ -7,11 +7,11 @@
         <base-button link to="/register">Developer Registration</base-button>
       </div>
       <ul v-if="hasDevelopers">
-        <developer-details
+        <developer-item
           v-for="dev in filteredDevelopers"
           :key="dev.id"
           :dev-details="dev"
-        ></developer-details>
+        ></developer-item>
       </ul>
       <h3 v-else>No Developers Found</h3>
     </base-card>
@@ -20,11 +20,11 @@
 
 <script>
 import BaseButton from '../../components/base-components/BaseButton.vue';
-import DeveloperDetails from '../../components/developers/DeveloperDetails.vue';
+import DeveloperItem from '../../components/developers/DeveloperItem.vue';
 export default {
   components: {
-    DeveloperDetails,
     BaseButton,
+    DeveloperItem,
   },
   computed: {
     filteredDevelopers() {
