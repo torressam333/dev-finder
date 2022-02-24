@@ -2,6 +2,10 @@ import { mount } from '@vue/test-utils';
 import DevFilter from '../../src/components/developers/DevFilter.vue';
 
 describe('Should properly filter developers', () => {
+  test('should properly render a vue instance', () => {
+    expect(mount(DevFilter).exists()).toBeTruthy();
+  });
+
   test('should have multiple spans with the same class', () => {
     const wrapper = mount(DevFilter);
     const spans = wrapper.findAll('span');
