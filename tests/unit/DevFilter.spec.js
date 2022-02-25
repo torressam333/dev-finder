@@ -18,4 +18,6 @@ describe('Should properly filter developers', () => {
     expect(spans.at(1).classes()).toContain('filter-option');
     expect(spans.at(2).classes()).toContain('filter-option');
   });
+
+  test('should change')
 });
