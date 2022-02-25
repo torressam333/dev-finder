@@ -10,13 +10,8 @@
       <label for="backend">Backend</label>
     </span>
     <span class="filter-option">
-      <input
-        type="checkbox"
-        id="machine-learning"
-        checked
-        @change="setFilter"
-      />
-      <label for="machine-learning">Machine Learning</label>
+      <input type="checkbox" id="machineLearning" checked @change="setFilter" />
+      <label for="machineLearning">Machine Learning</label>
     </span>
   </base-card>
 </template>

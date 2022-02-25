@@ -21,7 +21,7 @@ export default {
           id: 'dev2',
           firstName: 'Roger',
           lastName: 'Rabbit',
-          areas: ['backend', 'machine-learning'],
+          areas: ['backend', 'machineLearning'],
           description:
             'I am Roger and as a senior software engineer, I can help your company improve its backend and data processes',
           hourlyRate: 45,

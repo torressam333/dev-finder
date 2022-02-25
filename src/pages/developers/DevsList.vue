@@ -1,5 +1,8 @@
 <template>
   <section>
+    <dev-filter @change-filter="setFilters" />
+  </section>
+  <section>
     <base-card>
       <div class="controls">
         <base-button mode="outline">Refresh List</base-button>
@@ -19,18 +22,41 @@
 
 <script>
 import BaseButton from '../../components/base-components/BaseButton.vue';
+import DevFilter from '../../components/developers/DevFilter.vue';
 import DeveloperItem from '../../components/developers/DeveloperItem.vue';
 export default {
   components: {
     BaseButton,
+    DevFilter,
     DeveloperItem,
+  },
+  data() {
+    return {
+      activeFilters: {
+        backend: true,
+        frontend: true,
+        machineLearning: true,
+      },
+    };
   },
   computed: {
     filteredDevelopers() {
-      return this.$store.getters['developers/getAllDevelopers'];
+      const allDevs = this.$store.getters['developers/getAllDevelopers'];
+
+      return allDevs.filter((dev) => {
+        for (const area in this.activeFilters) {
+          if (this.activeFilters[area] && dev.areas.includes(area)) return true;
+        }
+        return false;
+      });
     },
     hasDevelopers() {
       return this.$store.getters['developers/hasDevelopers'];
+    },
+  },
+  methods: {
+    setFilters(updatedFilters) {
+      this.activeFilters = updatedFilters;
     },
   },
 };

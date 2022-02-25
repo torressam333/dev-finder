@@ -12,12 +12,16 @@ describe('Should properly filter developers', () => {
     expect(mount(DevFilter).exists()).toBeTruthy();
   });
 
+  test('markup should contain a base card with a class of card', () => {
+    //Base card child component parent class
+    expect(wrapper.classes()).toContain('card');
+  });
+
   test('should have multiple spans with the same class', () => {
     const spans = wrapper.findAll('span');
 
     expect(spans.length).toBe(3);
-    //Base card child component parent class
-    expect(wrapper.classes()).toContain('card');
+
     //All spans have the same class selector
     expect(spans.at(0).classes()).toContain('filter-option');
     expect(spans.at(1).classes()).toContain('filter-option');
