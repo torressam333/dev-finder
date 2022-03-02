@@ -2,6 +2,6 @@
 
 describe('Should contain all information pertinent to a developer', () => {
   test('placeholder', () => {
-    console.log('some placeholder');
+    //TODO finish test
   });
 });
