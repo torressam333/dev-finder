@@ -28,5 +28,9 @@ describe('Should properly filter developers', () => {
     expect(spans.at(2).classes()).toContain('filter-option');
   });
 
-  test('should contain expected data properties', () => {});
+  test('should contain expected data properties', () => {
+    expect(wrapper.vm.$data).toEqual({
+      filters: { backend: true, frontend: true, machineLearning: true },
+    });
+  });
 });
