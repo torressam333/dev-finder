@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import DevForm from '../../src/pages/developers/DevForm.vue';
+import DevForm from '../../src/components/developers/DevForm.vue';
 
 let wrapper;
 

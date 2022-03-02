@@ -1,5 +1,5 @@
 <template>
-  <form action="">
+  <form action="" @submit.prevent="formSubmitted">
     <div class="form-control">
       <label for="firstname">Firstname</label>
       <input type="text" id="firstname" v-model.trim="firstName" />
@@ -56,6 +56,19 @@ export default {
       hourlyRate: null,
       lastName: '',
     };
+  },
+  methods: {
+    formSubmitted() {
+      const formData = {
+        areas: this.areas,
+        desc: this.description,
+        first: this.firstName,
+        last: this.lastName,
+        rate: this.hourlyRate,
+      };
+
+      console.log(formData);
+    },
   },
 };
 </script>
