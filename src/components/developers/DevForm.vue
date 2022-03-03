@@ -46,8 +46,10 @@
 </template>
 
 <script>
+import BaseButton from '../base-components/BaseButton.vue';
 export default {
   name: 'dev-form',
+  components: { BaseButton },
   data() {
     return {
       areas: [],
