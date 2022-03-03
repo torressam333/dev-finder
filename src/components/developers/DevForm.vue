@@ -1,11 +1,11 @@
 <template>
-  <form action="" @submit.prevent="formSubmitted">
+  <form @submit.prevent="formSubmitted">
     <div class="form-control">
-      <label for="firstname">Firstname</label>
+      <label for="firstname">First Name</label>
       <input type="text" id="firstname" v-model.trim="firstName" />
     </div>
     <div class="form-control">
-      <label for="lastname">LastName</label>
+      <label for="lastname">Last Name</label>
       <input type="text" id="lastname" v-model.trim="lastName" />
     </div>
     <div class="form-control">
@@ -72,3 +72,61 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.form-control {
+  margin: 0.5rem 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type='checkbox'] + label {
+  display: inline;
+  font-weight: normal;
+  margin: 0 0 0 0.5rem;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: block;
+  font: inherit;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #e2eff5;
+  border-color: #00658d;
+  outline: none;
+}
+
+input[type='checkbox'] {
+  border: none;
+  display: inline;
+  width: auto;
+}
+
+input[type='checkbox']:focus {
+  outline: #00658d solid 1px;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.invalid label {
+  color: rgb(223, 35, 35);
+}
+
+.invalid input,
+.invalid textarea {
+  border: 1px solid rgb(223, 35, 35);
+}
+</style>

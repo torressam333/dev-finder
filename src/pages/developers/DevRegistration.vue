@@ -1,7 +1,7 @@
 <template>
   <section>
     <base-card>
-      <h2>Register as a Developer!</h2>
+      <h2>Developer Registration</h2>
       <dev-form />
     </base-card>
   </section>
