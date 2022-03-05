@@ -1,5 +1,3 @@
-import { data } from '@tensorflow/tfjs';
-
 export default {
   registerDev(context, data) {
     //construct dev data - keys must match what the vuex store has
