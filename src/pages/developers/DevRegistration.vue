@@ -20,6 +20,10 @@ export default {
     saveData(formData) {
       //Namespace/action name, formdata to persist
       this.$store.dispatch('developers/registerDev', formData);
+
+      //Use replace instead of push to prevent user from going back to submitted
+      //form page
+      this.$router.replace('/developers');
     },
   },
 };
