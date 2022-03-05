@@ -18,8 +18,8 @@ export default {
   },
   methods: {
     saveData(formData) {
-      
-      this.$store.dispath();
+      //Namespace/action name, formdata to persist
+      this.$store.dispatch('developers/registerDev', formData);
     },
   },
 };

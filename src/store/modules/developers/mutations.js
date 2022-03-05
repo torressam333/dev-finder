@@ -1,5 +1,5 @@
 export default {
   registerDev(state, payload) {
-    state.coaches.push(payload);
+    state.developers.push(payload);
   },
 };
