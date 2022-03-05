@@ -49,6 +49,7 @@
 import BaseButton from '../base-components/BaseButton.vue';
 export default {
   name: 'dev-form',
+  emits: ['save-data'],
   components: { BaseButton },
   data() {
     return {
@@ -69,7 +70,7 @@ export default {
         rate: this.hourlyRate,
       };
 
-      console.log(formData);
+      this.$emit('save-data', formData);
     },
   },
 };
