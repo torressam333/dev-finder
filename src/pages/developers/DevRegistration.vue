@@ -2,7 +2,7 @@
   <section>
     <base-card>
       <h2>Developer Registration</h2>
-      <dev-form />
+      <dev-form @save-data="saveData" />
     </base-card>
   </section>
 </template>
@@ -15,6 +15,12 @@ export default {
   components: {
     BaseCard,
     DevForm,
+  },
+  methods: {
+    saveData(formData) {
+      
+      this.$store.dispath();
+    },
   },
 };
 </script>
