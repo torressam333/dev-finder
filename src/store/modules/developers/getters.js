@@ -10,7 +10,8 @@ export default {
     return state.developers.find((dev) => dev.id === id);
   },
   isDev(_, getters, _2, rootGetters) {
-    const developers = getters.developers;
+    const developers = getters.getAllDevelopers;
+
     //Look for a dev with our userId in root state
     const userId = rootGetters.userId;
 

@@ -16,6 +16,11 @@ export default {
     BaseCard,
     DevForm,
   },
+  computed: {
+    isDev() {
+      return this.$store.getters['developers/isDev'];
+    },
+  },
   methods: {
     saveData(formData) {
       //Namespace/action name, formdata to persist
