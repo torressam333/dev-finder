@@ -8,5 +8,13 @@ export default {
   },
   getDeveloperById(state, id) {
     return state.developers.find((dev) => dev.id === id);
-  }
+  },
+  isDev(_, getters, _2, rootGetters) {
+    const developers = getters.developers;
+    //Look for a dev with our userId in root state
+    const userId = rootGetters.userId;
+
+    //Bool value returned
+    return developers.some((dev) => (dev.id = userId));
+  },
 };

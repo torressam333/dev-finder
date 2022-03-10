@@ -2,7 +2,7 @@ export default {
   registerDev(context, data) {
     //construct dev data - keys must match what the vuex store has
     const devData = {
-      id: new Date().toISOString(), //creating unique id for dev
+      id: context.rootGetters.userId,
       firstName: data.first,
       lastName: data.last,
       description: data.desc,

@@ -8,4 +8,14 @@ export default createStore({
   modules: {
     developers: developerModule,
   },
+  state() {
+    return {
+      userId: 'd1',
+    };
+  },
+  getters: {
+    userId(state) {
+      return state.userId;
+    },
+  },
 });

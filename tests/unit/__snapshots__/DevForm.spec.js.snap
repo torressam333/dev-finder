@@ -418,7 +418,9 @@ VueWrapper {
             "scheduler": [Function],
           },
           "emit": [Function],
-          "emitsOptions": null,
+          "emitsOptions": Object {
+            "save-data": null,
+          },
           "emitted": null,
           "exposeProxy": null,
           "exposed": null,
@@ -2917,6 +2919,9 @@ VueWrapper {
               },
             },
             "data": [Function],
+            "emits": Array [
+              "save-data",
+            ],
             "methods": Object {
               "formSubmitted": [Function],
             },
@@ -3089,6 +3094,9 @@ VueWrapper {
             },
           },
           "data": [Function],
+          "emits": Array [
+            "save-data",
+          ],
           "methods": Object {
             "formSubmitted": [Function],
           },
