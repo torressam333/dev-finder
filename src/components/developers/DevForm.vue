@@ -2,11 +2,11 @@
   <form @submit.prevent="formSubmitted">
     <div class="form-control">
       <label for="firstname">First Name</label>
-      <input type="text" id="firstname" v-model.trim="firstName" />
+      <input type="text" id="firstname" v-model.trim="firstName.value" />
     </div>
     <div class="form-control">
       <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" v-model.trim="lastName" />
+      <input type="text" id="lastname" v-model.trim="lastName.value" />
     </div>
     <div class="form-control">
       <label for="description">Description</label>
@@ -14,21 +14,31 @@
         type="text"
         id="description"
         rows="5"
-        v-model.trim="description"
+        v-model.trim="description.value"
       ></textarea>
     </div>
     <div class="form-control">
       <label for="rate">Hourly Rate</label>
-      <input type="number" id="rate" v-model.number="hourlyRate" />
+      <input type="number" id="rate" v-model.number="hourlyRate.value" />
     </div>
     <div class="form-control">
       <h3>Areas of Expertise</h3>
       <div>
-        <input type="checkbox" id="frontend" value="frontend" v-model="areas" />
+        <input
+          type="checkbox"
+          id="frontend"
+          value="frontend"
+          v-model="areas.value"
+        />
         <label for="frontend">Frontend Developer</label>
       </div>
       <div>
-        <input type="checkbox" id="backend" value="backend" v-model="areas" />
+        <input
+          type="checkbox"
+          id="backend"
+          value="backend"
+          v-model="areas.value"
+        />
         <label for="backend">Backend Developer</label>
       </div>
       <div>
@@ -36,7 +46,7 @@
           type="checkbox"
           id="machineLearning"
           value="machineLearning"
-          v-model="areas"
+          v-model="areas.value"
         />
         <label for="machineLearning">Machine Learning Engineer</label>
       </div>
@@ -53,25 +63,44 @@ export default {
   components: { BaseButton },
   data() {
     return {
-      areas: [],
-      description: '',
-      firstName: '',
-      hourlyRate: null,
-      lastName: '',
+      areas: {
+        value: [],
+        isValid: true,
+      },
+      description: {
+        value: '',
+        isValid: true,
+      },
+      firstName: {
+        value: '',
+        isValid: true,
+      },
+      formIsValid: true,
+      hourlyRate: {
+        value: null,
+        isValid: true,
+      },
+      lastName: {
+        value: '',
+        isValid: true,
+      },
     };
   },
   methods: {
     formSubmitted() {
+      this.validateForm();
+
       const formData = {
-        areas: this.areas,
-        desc: this.description,
-        first: this.firstName,
-        last: this.lastName,
-        rate: this.hourlyRate,
+        areas: this.areas.value,
+        desc: this.description.value,
+        first: this.firstName.value,
+        last: this.lastName.value,
+        rate: this.hourlyRate.value,
       };
 
       this.$emit('save-data', formData);
     },
+    validateForm() {},
   },
 };
 </script>
