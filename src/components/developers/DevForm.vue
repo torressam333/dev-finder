@@ -90,6 +90,10 @@ export default {
     formSubmitted() {
       this.validateForm();
 
+      if (!this.formIsValid) {
+        return;
+      }
+
       const formData = {
         areas: this.areas.value,
         desc: this.description.value,
@@ -100,7 +104,36 @@ export default {
 
       this.$emit('save-data', formData);
     },
-    validateForm() {},
+    validateForm() {
+      this.formIsValid = true;
+
+      //Check each fields value, if any one fails then the
+      //entire form is invalid
+      if (!this.firstName.value) {
+        this.firstName.isValid = false;
+        this.formIsValid = false;
+      }
+
+      if (!this.lastName.value) {
+        this.lastName.isValid = false;
+        this.formIsValid = false;
+      }
+
+      if (!this.description.value) {
+        this.description.isValid = false;
+        this.formIsValid = false;
+      }
+
+      if (!this.hourlyRate.value || this.hourlyRate.val < 0) {
+        this.hourlyRate.isValid = false;
+        this.formIsValid = false;
+      }
+
+      if (!this.areas.value.length) {
+        this.areas.isValid = false;
+        this.formIsValid = false;
+      }
+    },
   },
 };
 </script>
