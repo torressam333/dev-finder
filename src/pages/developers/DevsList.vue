@@ -6,7 +6,9 @@
     <base-card>
       <div class="controls">
         <base-button mode="outline">Refresh List</base-button>
-        <base-button link to="/register">Developer Registration</base-button>
+        <base-button link to="/register" v-if="!isDev">
+          Developer Registration
+        </base-button>
       </div>
       <ul v-if="hasDevelopers">
         <developer-item
@@ -52,6 +54,9 @@ export default {
     },
     hasDevelopers() {
       return this.$store.getters['developers/hasDevelopers'];
+    },
+    isDev() {
+      return this.$store.getters['developers/isDev'];
     },
   },
   methods: {
