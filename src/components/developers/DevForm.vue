@@ -1,14 +1,16 @@
 <template>
   <form @submit.prevent="formSubmitted">
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !firstName.isValid }">
       <label for="firstname">First Name</label>
       <input type="text" id="firstname" v-model.trim="firstName.value" />
+      <p v-if="!firstName.isValid">First name is required</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !lastName.isValid }">
       <label for="lastname">Last Name</label>
       <input type="text" id="lastname" v-model.trim="lastName.value" />
+      <p v-if="!lastName.isValid">First name is required</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !description.isValid }">
       <label for="description">Description</label>
       <textarea
         type="text"
@@ -16,12 +18,14 @@
         rows="5"
         v-model.trim="description.value"
       ></textarea>
+      <p v-if="!description.isValid">A description is required</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !hourlyRate.isValid }">
       <label for="rate">Hourly Rate</label>
       <input type="number" id="rate" v-model.number="hourlyRate.value" />
+      <p v-if="!hourlyRate.isValid">Hourly rate must be greater than zero</p>
     </div>
-    <div class="form-control">
+    <div class="form-control" :class="{ invalid: !areas.isValid }">
       <h3>Areas of Expertise</h3>
       <div>
         <input
@@ -50,7 +54,11 @@
         />
         <label for="machineLearning">Machine Learning Engineer</label>
       </div>
+      <p v-if="!areas.isValid">Minimum of one area of expertise is required</p>
     </div>
+    <p v-if="!formIsValid">
+      The above errors must be fixed before submitting the form
+    </p>
     <base-button>Register</base-button>
   </form>
 </template>
@@ -187,11 +195,11 @@ h3 {
 }
 
 .invalid label {
-  color: rgb(223, 35, 35);
+  color: rgb(173, 17, 17);
 }
 
 .invalid input,
 .invalid textarea {
-  border: 1px solid rgb(223, 35, 35);
+  border: 2px solid rgb(175, 15, 15);
 }
 </style>
