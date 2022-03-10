@@ -2,12 +2,22 @@
   <form @submit.prevent="formSubmitted">
     <div class="form-control" :class="{ invalid: !firstName.isValid }">
       <label for="firstname">First Name</label>
-      <input type="text" id="firstname" v-model.trim="firstName.value" />
+      <input
+        type="text"
+        id="firstname"
+        v-model.trim="firstName.value"
+        @blur="clearError('firstName')"
+      />
       <p v-if="!firstName.isValid">First name is required</p>
     </div>
     <div class="form-control" :class="{ invalid: !lastName.isValid }">
       <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" v-model.trim="lastName.value" />
+      <input
+        type="text"
+        id="lastname"
+        v-model.trim="lastName.value"
+        @blur="clearError('lastName')"
+      />
       <p v-if="!lastName.isValid">First name is required</p>
     </div>
     <div class="form-control" :class="{ invalid: !description.isValid }">
@@ -17,12 +27,18 @@
         id="description"
         rows="5"
         v-model.trim="description.value"
+        @blur="clearError('description')"
       ></textarea>
       <p v-if="!description.isValid">A description is required</p>
     </div>
     <div class="form-control" :class="{ invalid: !hourlyRate.isValid }">
       <label for="rate">Hourly Rate</label>
-      <input type="number" id="rate" v-model.number="hourlyRate.value" />
+      <input
+        type="number"
+        id="rate"
+        v-model.number="hourlyRate.value"
+        @blur="clearError('hourlyRate')"
+      />
       <p v-if="!hourlyRate.isValid">Hourly rate must be greater than zero</p>
     </div>
     <div class="form-control" :class="{ invalid: !areas.isValid }">
@@ -33,6 +49,7 @@
           id="frontend"
           value="frontend"
           v-model="areas.value"
+          @change="clearError('areas')"
         />
         <label for="frontend">Frontend Developer</label>
       </div>
@@ -42,6 +59,7 @@
           id="backend"
           value="backend"
           v-model="areas.value"
+          @change="clearError('areas')"
         />
         <label for="backend">Backend Developer</label>
       </div>
@@ -51,6 +69,7 @@
           id="machineLearning"
           value="machineLearning"
           v-model="areas.value"
+          @change="clearError('areas')"
         />
         <label for="machineLearning">Machine Learning Engineer</label>
       </div>
@@ -95,6 +114,12 @@ export default {
     };
   },
   methods: {
+    clearError(inputName) {
+      //Dynamically remove errors from valid fields
+      //in real time
+      this[inputName].isValid = true;
+    },
+
     formSubmitted() {
       this.validateForm();
 
