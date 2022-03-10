@@ -10,7 +10,7 @@ export default createStore({
   },
   state() {
     return {
-      userId: 'd1',
+      userId: 'dev1',
     };
   },
   getters: {
