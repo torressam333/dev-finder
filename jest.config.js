@@ -4,4 +4,7 @@ module.exports = {
     '^.+\\.vue$': 'vue-jest',
   },
   testPathIgnorePatterns: ['./node_modules/'],
+  compilerOptions: {
+    isCustomElement: (tag) => tag.startsWith('router-'),
+  },
 };

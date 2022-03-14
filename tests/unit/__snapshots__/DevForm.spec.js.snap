@@ -23,6 +23,7 @@ VueWrapper {
             id="firstname"
             type="text"
           />
+          <!--v-if-->
         </div>
         <div
           class="form-control"
@@ -36,6 +37,7 @@ VueWrapper {
             id="lastname"
             type="text"
           />
+          <!--v-if-->
         </div>
         <div
           class="form-control"
@@ -50,6 +52,7 @@ VueWrapper {
             rows="5"
             type="text"
           />
+          <!--v-if-->
         </div>
         <div
           class="form-control"
@@ -63,6 +66,7 @@ VueWrapper {
             id="rate"
             type="number"
           />
+          <!--v-if-->
         </div>
         <div
           class="form-control"
@@ -106,7 +110,9 @@ VueWrapper {
               Machine Learning Engineer
             </label>
           </div>
+          <!--v-if-->
         </div>
+        <!--v-if-->
         <button
           class=""
         >
@@ -234,13 +240,31 @@ VueWrapper {
       "proxy": Object {},
       "refs": Object {
         "VTU_COMPONENT": Object {
-          "areas": Array [],
-          "description": "",
-          "firstName": "",
+          "areas": Object {
+            "isValid": true,
+            "value": Array [],
+          },
+          "clearError": [Function],
+          "description": Object {
+            "isValid": true,
+            "value": "",
+          },
+          "firstName": Object {
+            "isValid": true,
+            "value": "",
+          },
+          "formIsValid": true,
           "formSubmitted": [Function],
           "hasOwnProperty": [Function],
-          "hourlyRate": null,
-          "lastName": "",
+          "hourlyRate": Object {
+            "isValid": true,
+            "value": null,
+          },
+          "lastName": Object {
+            "isValid": true,
+            "value": "",
+          },
+          "validateForm": [Function],
         },
       },
       "render": [Function],
@@ -288,15 +312,18 @@ VueWrapper {
             "@@__IMMUTABLE_RECORD__@@": 0,
             "_isMockFunction": 0,
             "areas": 2,
+            "clearError": 4,
             "constructor": 0,
             "description": 2,
             "firstName": 2,
+            "formIsValid": 2,
             "formSubmitted": 4,
             "hasOwnProperty": 4,
             "hourlyRate": 2,
             "isVueInstance": 0,
             "lastName": 2,
             "toJSON": 0,
+            "validateForm": 4,
             Symbol(Symbol.toStringTag): 0,
           },
           "appContext": Object {
@@ -367,21 +394,55 @@ VueWrapper {
             },
           },
           "ctx": Object {
-            "areas": Array [],
-            "description": "",
-            "firstName": "",
+            "areas": Object {
+              "isValid": true,
+              "value": Array [],
+            },
+            "clearError": [Function],
+            "description": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "firstName": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "formIsValid": true,
             "formSubmitted": [Function],
             "hasOwnProperty": [Function],
-            "hourlyRate": null,
-            "lastName": "",
+            "hourlyRate": Object {
+              "isValid": true,
+              "value": null,
+            },
+            "lastName": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "validateForm": [Function],
           },
           "da": null,
           "data": Object {
-            "areas": Array [],
-            "description": "",
-            "firstName": "",
-            "hourlyRate": null,
-            "lastName": "",
+            "areas": Object {
+              "isValid": true,
+              "value": Array [],
+            },
+            "description": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "firstName": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "formIsValid": true,
+            "hourlyRate": Object {
+              "isValid": true,
+              "value": null,
+            },
+            "lastName": Object {
+              "isValid": true,
+              "value": "",
+            },
           },
           "directives": null,
           "ec": null,
@@ -389,6 +450,39 @@ VueWrapper {
             "active": true,
             "allowRecurse": true,
             "deps": Array [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
               Set {
                 [Circular],
               },
@@ -439,17 +533,42 @@ VueWrapper {
           ],
           "provides": Object {},
           "proxy": Object {
-            "areas": Array [],
-            "description": "",
-            "firstName": "",
+            "areas": Object {
+              "isValid": true,
+              "value": Array [],
+            },
+            "clearError": [Function],
+            "description": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "firstName": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "formIsValid": true,
             "formSubmitted": [Function],
             "hasOwnProperty": [Function],
-            "hourlyRate": null,
-            "lastName": "",
+            "hourlyRate": Object {
+              "isValid": true,
+              "value": null,
+            },
+            "lastName": Object {
+              "isValid": true,
+              "value": "",
+            },
+            "validateForm": [Function],
           },
           "refs": Object {},
           "render": [Function],
           "renderCache": Array [
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
+            [Function],
             [Function],
             [Function],
             [Function],
@@ -470,6 +589,39 @@ VueWrapper {
                 "active": true,
                 "allowRecurse": true,
                 "deps": Array [
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
                   Set {
                     [Circular],
                   },
@@ -565,13 +717,31 @@ VueWrapper {
                           "mounted": [Function],
                         },
                         "instance": Object {
-                          "areas": Array [],
-                          "description": "",
-                          "firstName": "",
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
                           "formSubmitted": [Function],
                           "hasOwnProperty": [Function],
-                          "hourlyRate": null,
-                          "lastName": "",
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
                         },
                         "modifiers": Object {
                           "trim": true,
@@ -587,9 +757,10 @@ VueWrapper {
                       type="text"
                     />,
                     "key": null,
-                    "patchFlag": 512,
+                    "patchFlag": 544,
                     "props": Object {
                       "id": "firstname",
+                      "onBlur": [Function],
                       "onUpdate:modelValue": [Function],
                       "type": "text",
                     },
@@ -605,6 +776,33 @@ VueWrapper {
                     "targetAnchor": null,
                     "transition": null,
                     "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
                   },
                 ],
                 "component": null,
@@ -623,9 +821,10 @@ VueWrapper {
                     id="firstname"
                     type="text"
                   />
+                  <!--v-if-->
                 </div>,
                 "key": null,
-                "patchFlag": 0,
+                "patchFlag": 2,
                 "props": Object {
                   "class": "form-control",
                 },
@@ -697,13 +896,31 @@ VueWrapper {
                           "mounted": [Function],
                         },
                         "instance": Object {
-                          "areas": Array [],
-                          "description": "",
-                          "firstName": "",
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
                           "formSubmitted": [Function],
                           "hasOwnProperty": [Function],
-                          "hourlyRate": null,
-                          "lastName": "",
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
                         },
                         "modifiers": Object {
                           "trim": true,
@@ -719,9 +936,10 @@ VueWrapper {
                       type="text"
                     />,
                     "key": null,
-                    "patchFlag": 512,
+                    "patchFlag": 544,
                     "props": Object {
                       "id": "lastname",
+                      "onBlur": [Function],
                       "onUpdate:modelValue": [Function],
                       "type": "text",
                     },
@@ -737,6 +955,33 @@ VueWrapper {
                     "targetAnchor": null,
                     "transition": null,
                     "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
                   },
                 ],
                 "component": null,
@@ -755,9 +1000,10 @@ VueWrapper {
                     id="lastname"
                     type="text"
                   />
+                  <!--v-if-->
                 </div>,
                 "key": null,
-                "patchFlag": 0,
+                "patchFlag": 2,
                 "props": Object {
                   "class": "form-control",
                 },
@@ -829,13 +1075,31 @@ VueWrapper {
                           "mounted": [Function],
                         },
                         "instance": Object {
-                          "areas": Array [],
-                          "description": "",
-                          "firstName": "",
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
                           "formSubmitted": [Function],
                           "hasOwnProperty": [Function],
-                          "hourlyRate": null,
-                          "lastName": "",
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
                         },
                         "modifiers": Object {
                           "trim": true,
@@ -852,9 +1116,10 @@ VueWrapper {
                       type="text"
                     />,
                     "key": null,
-                    "patchFlag": 512,
+                    "patchFlag": 544,
                     "props": Object {
                       "id": "description",
+                      "onBlur": [Function],
                       "onUpdate:modelValue": [Function],
                       "rows": "5",
                       "type": "text",
@@ -871,6 +1136,33 @@ VueWrapper {
                     "targetAnchor": null,
                     "transition": null,
                     "type": "textarea",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
                   },
                 ],
                 "component": null,
@@ -890,9 +1182,10 @@ VueWrapper {
                     rows="5"
                     type="text"
                   />
+                  <!--v-if-->
                 </div>,
                 "key": null,
-                "patchFlag": 0,
+                "patchFlag": 2,
                 "props": Object {
                   "class": "form-control",
                 },
@@ -964,13 +1257,31 @@ VueWrapper {
                           "mounted": [Function],
                         },
                         "instance": Object {
-                          "areas": Array [],
-                          "description": "",
-                          "firstName": "",
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
                           "formSubmitted": [Function],
                           "hasOwnProperty": [Function],
-                          "hourlyRate": null,
-                          "lastName": "",
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
                         },
                         "modifiers": Object {
                           "number": true,
@@ -986,9 +1297,10 @@ VueWrapper {
                       type="number"
                     />,
                     "key": null,
-                    "patchFlag": 512,
+                    "patchFlag": 544,
                     "props": Object {
                       "id": "rate",
+                      "onBlur": [Function],
                       "onUpdate:modelValue": [Function],
                       "type": "number",
                     },
@@ -1004,6 +1316,33 @@ VueWrapper {
                     "targetAnchor": null,
                     "transition": null,
                     "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
                   },
                 ],
                 "component": null,
@@ -1022,9 +1361,10 @@ VueWrapper {
                     id="rate"
                     type="number"
                   />
+                  <!--v-if-->
                 </div>,
                 "key": null,
-                "patchFlag": 0,
+                "patchFlag": 2,
                 "props": Object {
                   "class": "form-control",
                 },
@@ -1099,13 +1439,31 @@ VueWrapper {
                               "mounted": [Function],
                             },
                             "instance": Object {
-                              "areas": Array [],
-                              "description": "",
-                              "firstName": "",
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
                               "formSubmitted": [Function],
                               "hasOwnProperty": [Function],
-                              "hourlyRate": null,
-                              "lastName": "",
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
                             },
                             "modifiers": Object {},
                             "oldValue": undefined,
@@ -1120,9 +1478,10 @@ VueWrapper {
                           value="frontend"
                         />,
                         "key": null,
-                        "patchFlag": 512,
+                        "patchFlag": 544,
                         "props": Object {
                           "id": "frontend",
+                          "onChange": [Function],
                           "onUpdate:modelValue": [Function],
                           "type": "checkbox",
                           "value": "frontend",
@@ -1229,13 +1588,31 @@ VueWrapper {
                               "mounted": [Function],
                             },
                             "instance": Object {
-                              "areas": Array [],
-                              "description": "",
-                              "firstName": "",
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
                               "formSubmitted": [Function],
                               "hasOwnProperty": [Function],
-                              "hourlyRate": null,
-                              "lastName": "",
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
                             },
                             "modifiers": Object {},
                             "oldValue": undefined,
@@ -1250,9 +1627,10 @@ VueWrapper {
                           value="backend"
                         />,
                         "key": null,
-                        "patchFlag": 512,
+                        "patchFlag": 544,
                         "props": Object {
                           "id": "backend",
+                          "onChange": [Function],
                           "onUpdate:modelValue": [Function],
                           "type": "checkbox",
                           "value": "backend",
@@ -1359,13 +1737,31 @@ VueWrapper {
                               "mounted": [Function],
                             },
                             "instance": Object {
-                              "areas": Array [],
-                              "description": "",
-                              "firstName": "",
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
                               "formSubmitted": [Function],
                               "hasOwnProperty": [Function],
-                              "hourlyRate": null,
-                              "lastName": "",
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
                             },
                             "modifiers": Object {},
                             "oldValue": undefined,
@@ -1380,9 +1776,10 @@ VueWrapper {
                           value="machineLearning"
                         />,
                         "key": null,
-                        "patchFlag": 512,
+                        "patchFlag": 544,
                         "props": Object {
                           "id": "machineLearning",
+                          "onChange": [Function],
                           "onUpdate:modelValue": [Function],
                           "type": "checkbox",
                           "value": "machineLearning",
@@ -1466,6 +1863,33 @@ VueWrapper {
                     "transition": null,
                     "type": "div",
                   },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
                 ],
                 "component": null,
                 "dirs": null,
@@ -1513,9 +1937,10 @@ VueWrapper {
                       Machine Learning Engineer
                     </label>
                   </div>
+                  <!--v-if-->
                 </div>,
                 "key": null,
-                "patchFlag": 0,
+                "patchFlag": 2,
                 "props": Object {
                   "class": "form-control",
                 },
@@ -1531,6 +1956,33 @@ VueWrapper {
                 "targetAnchor": null,
                 "transition": null,
                 "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
               },
               Object {
                 "__v_isVNode": true,
@@ -1959,13 +2411,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {
                       "trim": true,
@@ -1981,9 +2451,10 @@ VueWrapper {
                   type="text"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "firstname",
+                  "onBlur": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "text",
                 },
@@ -2005,6 +2476,212 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": Array [
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "First Name",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <label
+                      for="firstname"
+                    >
+                      First Name
+                    </label>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": Object {
+                      "for": "firstname",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "label",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "dirs": Array [
+                      Object {
+                        "arg": undefined,
+                        "dir": Object {
+                          "beforeUpdate": [Function],
+                          "created": [Function],
+                          "mounted": [Function],
+                        },
+                        "instance": Object {
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
+                          "formSubmitted": [Function],
+                          "hasOwnProperty": [Function],
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
+                        },
+                        "modifiers": Object {
+                          "trim": true,
+                        },
+                        "oldValue": undefined,
+                        "value": "",
+                      },
+                    ],
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <input
+                      id="firstname"
+                      type="text"
+                    />,
+                    "key": null,
+                    "patchFlag": 544,
+                    "props": Object {
+                      "id": "firstname",
+                      "onBlur": [Function],
+                      "onUpdate:modelValue": [Function],
+                      "type": "text",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="form-control"
+                >
+                  <label
+                    for="firstname"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    id="firstname"
+                    type="text"
+                  />
+                  <!--v-if-->
+                </div>,
+                "key": null,
+                "patchFlag": 2,
+                "props": Object {
+                  "class": "form-control",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
                 "children": null,
                 "component": null,
                 "dirs": Array [
@@ -2016,13 +2693,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {
                       "trim": true,
@@ -2038,9 +2733,10 @@ VueWrapper {
                   type="text"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "lastname",
+                  "onBlur": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "text",
                 },
@@ -2062,6 +2758,212 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": Array [
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "Last Name",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <label
+                      for="lastname"
+                    >
+                      Last Name
+                    </label>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": Object {
+                      "for": "lastname",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "label",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "dirs": Array [
+                      Object {
+                        "arg": undefined,
+                        "dir": Object {
+                          "beforeUpdate": [Function],
+                          "created": [Function],
+                          "mounted": [Function],
+                        },
+                        "instance": Object {
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
+                          "formSubmitted": [Function],
+                          "hasOwnProperty": [Function],
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
+                        },
+                        "modifiers": Object {
+                          "trim": true,
+                        },
+                        "oldValue": undefined,
+                        "value": "",
+                      },
+                    ],
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <input
+                      id="lastname"
+                      type="text"
+                    />,
+                    "key": null,
+                    "patchFlag": 544,
+                    "props": Object {
+                      "id": "lastname",
+                      "onBlur": [Function],
+                      "onUpdate:modelValue": [Function],
+                      "type": "text",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="form-control"
+                >
+                  <label
+                    for="lastname"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    id="lastname"
+                    type="text"
+                  />
+                  <!--v-if-->
+                </div>,
+                "key": null,
+                "patchFlag": 2,
+                "props": Object {
+                  "class": "form-control",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
                 "children": null,
                 "component": null,
                 "dirs": Array [
@@ -2073,13 +2975,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {
                       "trim": true,
@@ -2096,9 +3016,10 @@ VueWrapper {
                   type="text"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "description",
+                  "onBlur": [Function],
                   "onUpdate:modelValue": [Function],
                   "rows": "5",
                   "type": "text",
@@ -2121,6 +3042,215 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": Array [
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "Description",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <label
+                      for="description"
+                    >
+                      Description
+                    </label>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": Object {
+                      "for": "description",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "label",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "dirs": Array [
+                      Object {
+                        "arg": undefined,
+                        "dir": Object {
+                          "beforeUpdate": [Function],
+                          "created": [Function],
+                          "mounted": [Function],
+                        },
+                        "instance": Object {
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
+                          "formSubmitted": [Function],
+                          "hasOwnProperty": [Function],
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
+                        },
+                        "modifiers": Object {
+                          "trim": true,
+                        },
+                        "oldValue": undefined,
+                        "value": "",
+                      },
+                    ],
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <textarea
+                      id="description"
+                      rows="5"
+                      type="text"
+                    />,
+                    "key": null,
+                    "patchFlag": 544,
+                    "props": Object {
+                      "id": "description",
+                      "onBlur": [Function],
+                      "onUpdate:modelValue": [Function],
+                      "rows": "5",
+                      "type": "text",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "textarea",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="form-control"
+                >
+                  <label
+                    for="description"
+                  >
+                    Description
+                  </label>
+                  <textarea
+                    id="description"
+                    rows="5"
+                    type="text"
+                  />
+                  <!--v-if-->
+                </div>,
+                "key": null,
+                "patchFlag": 2,
+                "props": Object {
+                  "class": "form-control",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
                 "children": null,
                 "component": null,
                 "dirs": Array [
@@ -2132,13 +3262,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {
                       "number": true,
@@ -2154,9 +3302,10 @@ VueWrapper {
                   type="number"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "rate",
+                  "onBlur": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "number",
                 },
@@ -2178,6 +3327,212 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": Array [
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "Hourly Rate",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <label
+                      for="rate"
+                    >
+                      Hourly Rate
+                    </label>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": Object {
+                      "for": "rate",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "label",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": null,
+                    "dirs": Array [
+                      Object {
+                        "arg": undefined,
+                        "dir": Object {
+                          "beforeUpdate": [Function],
+                          "created": [Function],
+                          "mounted": [Function],
+                        },
+                        "instance": Object {
+                          "areas": Object {
+                            "isValid": true,
+                            "value": Array [],
+                          },
+                          "clearError": [Function],
+                          "description": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "firstName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "formIsValid": true,
+                          "formSubmitted": [Function],
+                          "hasOwnProperty": [Function],
+                          "hourlyRate": Object {
+                            "isValid": true,
+                            "value": null,
+                          },
+                          "lastName": Object {
+                            "isValid": true,
+                            "value": "",
+                          },
+                          "validateForm": [Function],
+                        },
+                        "modifiers": Object {
+                          "number": true,
+                        },
+                        "oldValue": undefined,
+                        "value": null,
+                      },
+                    ],
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <input
+                      id="rate"
+                      type="number"
+                    />,
+                    "key": null,
+                    "patchFlag": 544,
+                    "props": Object {
+                      "id": "rate",
+                      "onBlur": [Function],
+                      "onUpdate:modelValue": [Function],
+                      "type": "number",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 1,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="form-control"
+                >
+                  <label
+                    for="rate"
+                  >
+                    Hourly Rate
+                  </label>
+                  <input
+                    id="rate"
+                    type="number"
+                  />
+                  <!--v-if-->
+                </div>,
+                "key": null,
+                "patchFlag": 2,
+                "props": Object {
+                  "class": "form-control",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
                 "children": null,
                 "component": null,
                 "dirs": Array [
@@ -2190,13 +3545,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {},
                     "oldValue": undefined,
@@ -2211,9 +3584,10 @@ VueWrapper {
                   value="frontend"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "frontend",
+                  "onChange": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "checkbox",
                   "value": "frontend",
@@ -2248,13 +3622,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {},
                     "oldValue": undefined,
@@ -2269,9 +3661,10 @@ VueWrapper {
                   value="backend"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "backend",
+                  "onChange": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "checkbox",
                   "value": "backend",
@@ -2306,13 +3699,31 @@ VueWrapper {
                       "mounted": [Function],
                     },
                     "instance": Object {
-                      "areas": Array [],
-                      "description": "",
-                      "firstName": "",
+                      "areas": Object {
+                        "isValid": true,
+                        "value": Array [],
+                      },
+                      "clearError": [Function],
+                      "description": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "firstName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "formIsValid": true,
                       "formSubmitted": [Function],
                       "hasOwnProperty": [Function],
-                      "hourlyRate": null,
-                      "lastName": "",
+                      "hourlyRate": Object {
+                        "isValid": true,
+                        "value": null,
+                      },
+                      "lastName": Object {
+                        "isValid": true,
+                        "value": "",
+                      },
+                      "validateForm": [Function],
                     },
                     "modifiers": Object {},
                     "oldValue": undefined,
@@ -2327,9 +3738,10 @@ VueWrapper {
                   value="machineLearning"
                 />,
                 "key": null,
-                "patchFlag": 512,
+                "patchFlag": 544,
                 "props": Object {
                   "id": "machineLearning",
+                  "onChange": [Function],
                   "onUpdate:modelValue": [Function],
                   "type": "checkbox",
                   "value": "machineLearning",
@@ -2346,6 +3758,636 @@ VueWrapper {
                 "targetAnchor": null,
                 "transition": null,
                 "type": "input",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": Array [
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "Areas of Expertise",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <h3>
+                      Areas of Expertise
+                    </h3>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "h3",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": Array [
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": null,
+                        "dirs": Array [
+                          Object {
+                            "arg": undefined,
+                            "dir": Object {
+                              "beforeUpdate": [Function],
+                              "created": [Function],
+                              "deep": true,
+                              "mounted": [Function],
+                            },
+                            "instance": Object {
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
+                              "formSubmitted": [Function],
+                              "hasOwnProperty": [Function],
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
+                            },
+                            "modifiers": Object {},
+                            "oldValue": undefined,
+                            "value": Array [],
+                          },
+                        ],
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <input
+                          id="frontend"
+                          type="checkbox"
+                          value="frontend"
+                        />,
+                        "key": null,
+                        "patchFlag": 544,
+                        "props": Object {
+                          "id": "frontend",
+                          "onChange": [Function],
+                          "onUpdate:modelValue": [Function],
+                          "type": "checkbox",
+                          "value": "frontend",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": "Frontend Developer",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <label
+                          for="frontend"
+                        >
+                          Frontend Developer
+                        </label>,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": Object {
+                          "for": "frontend",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "label",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div>
+                      <input
+                        id="frontend"
+                        type="checkbox"
+                        value="frontend"
+                      />
+                      <label
+                        for="frontend"
+                      >
+                        Frontend Developer
+                      </label>
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": Array [
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": null,
+                        "dirs": Array [
+                          Object {
+                            "arg": undefined,
+                            "dir": Object {
+                              "beforeUpdate": [Function],
+                              "created": [Function],
+                              "deep": true,
+                              "mounted": [Function],
+                            },
+                            "instance": Object {
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
+                              "formSubmitted": [Function],
+                              "hasOwnProperty": [Function],
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
+                            },
+                            "modifiers": Object {},
+                            "oldValue": undefined,
+                            "value": Array [],
+                          },
+                        ],
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <input
+                          id="backend"
+                          type="checkbox"
+                          value="backend"
+                        />,
+                        "key": null,
+                        "patchFlag": 544,
+                        "props": Object {
+                          "id": "backend",
+                          "onChange": [Function],
+                          "onUpdate:modelValue": [Function],
+                          "type": "checkbox",
+                          "value": "backend",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": "Backend Developer",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <label
+                          for="backend"
+                        >
+                          Backend Developer
+                        </label>,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": Object {
+                          "for": "backend",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "label",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div>
+                      <input
+                        id="backend"
+                        type="checkbox"
+                        value="backend"
+                      />
+                      <label
+                        for="backend"
+                      >
+                        Backend Developer
+                      </label>
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": Array [
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": null,
+                        "dirs": Array [
+                          Object {
+                            "arg": undefined,
+                            "dir": Object {
+                              "beforeUpdate": [Function],
+                              "created": [Function],
+                              "deep": true,
+                              "mounted": [Function],
+                            },
+                            "instance": Object {
+                              "areas": Object {
+                                "isValid": true,
+                                "value": Array [],
+                              },
+                              "clearError": [Function],
+                              "description": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "firstName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "formIsValid": true,
+                              "formSubmitted": [Function],
+                              "hasOwnProperty": [Function],
+                              "hourlyRate": Object {
+                                "isValid": true,
+                                "value": null,
+                              },
+                              "lastName": Object {
+                                "isValid": true,
+                                "value": "",
+                              },
+                              "validateForm": [Function],
+                            },
+                            "modifiers": Object {},
+                            "oldValue": undefined,
+                            "value": Array [],
+                          },
+                        ],
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <input
+                          id="machineLearning"
+                          type="checkbox"
+                          value="machineLearning"
+                        />,
+                        "key": null,
+                        "patchFlag": 544,
+                        "props": Object {
+                          "id": "machineLearning",
+                          "onChange": [Function],
+                          "onUpdate:modelValue": [Function],
+                          "type": "checkbox",
+                          "value": "machineLearning",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": "Machine Learning Engineer",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <label
+                          for="machineLearning"
+                        >
+                          Machine Learning Engineer
+                        </label>,
+                        "key": null,
+                        "patchFlag": -1,
+                        "props": Object {
+                          "for": "machineLearning",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "label",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <div>
+                      <input
+                        id="machineLearning"
+                        type="checkbox"
+                        value="machineLearning"
+                      />
+                      <label
+                        for="machineLearning"
+                      >
+                        Machine Learning Engineer
+                      </label>
+                    </div>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                  Object {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "v-if",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": Array [],
+                    "dynamicProps": null,
+                    "el": <!--v-if-->,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Comment),
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="form-control"
+                >
+                  <h3>
+                    Areas of Expertise
+                  </h3>
+                  <div>
+                    <input
+                      id="frontend"
+                      type="checkbox"
+                      value="frontend"
+                    />
+                    <label
+                      for="frontend"
+                    >
+                      Frontend Developer
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      id="backend"
+                      type="checkbox"
+                      value="backend"
+                    />
+                    <label
+                      for="backend"
+                    >
+                      Backend Developer
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      id="machineLearning"
+                      type="checkbox"
+                      value="machineLearning"
+                    />
+                    <label
+                      for="machineLearning"
+                    >
+                      Machine Learning Engineer
+                    </label>
+                  </div>
+                  <!--v-if-->
+                </div>,
+                "key": null,
+                "patchFlag": 2,
+                "props": Object {
+                  "class": "form-control",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              Object {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": "v-if",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": Array [],
+                "dynamicProps": null,
+                "el": <!--v-if-->,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 8,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": Symbol(Comment),
               },
               Object {
                 "__v_isVNode": true,
@@ -2777,6 +4819,7 @@ VueWrapper {
                   id="firstname"
                   type="text"
                 />
+                <!--v-if-->
               </div>
               <div
                 class="form-control"
@@ -2790,6 +4833,7 @@ VueWrapper {
                   id="lastname"
                   type="text"
                 />
+                <!--v-if-->
               </div>
               <div
                 class="form-control"
@@ -2804,6 +4848,7 @@ VueWrapper {
                   rows="5"
                   type="text"
                 />
+                <!--v-if-->
               </div>
               <div
                 class="form-control"
@@ -2817,6 +4862,7 @@ VueWrapper {
                   id="rate"
                   type="number"
                 />
+                <!--v-if-->
               </div>
               <div
                 class="form-control"
@@ -2860,7 +4906,9 @@ VueWrapper {
                     Machine Learning Engineer
                   </label>
                 </div>
+                <!--v-if-->
               </div>
+              <!--v-if-->
               <button
                 class=""
               >
@@ -2923,7 +4971,9 @@ VueWrapper {
               "save-data",
             ],
             "methods": Object {
+              "clearError": [Function],
               "formSubmitted": [Function],
+              "validateForm": [Function],
             },
             "name": "dev-form",
             "render": [Function],
@@ -2951,6 +5001,7 @@ VueWrapper {
               id="firstname"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -2964,6 +5015,7 @@ VueWrapper {
               id="lastname"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -2978,6 +5030,7 @@ VueWrapper {
               rows="5"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -2991,6 +5044,7 @@ VueWrapper {
               id="rate"
               type="number"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -3034,7 +5088,9 @@ VueWrapper {
                 Machine Learning Engineer
               </label>
             </div>
+            <!--v-if-->
           </div>
+          <!--v-if-->
           <button
             class=""
           >
@@ -3098,7 +5154,9 @@ VueWrapper {
             "save-data",
           ],
           "methods": Object {
+            "clearError": [Function],
             "formSubmitted": [Function],
+            "validateForm": [Function],
           },
           "name": "dev-form",
           "render": [Function],
@@ -3167,6 +5225,7 @@ VueWrapper {
               id="firstname"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -3180,6 +5239,7 @@ VueWrapper {
               id="lastname"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -3194,6 +5254,7 @@ VueWrapper {
               rows="5"
               type="text"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -3207,6 +5268,7 @@ VueWrapper {
               id="rate"
               type="number"
             />
+            <!--v-if-->
           </div>
           <div
             class="form-control"
@@ -3250,7 +5312,9 @@ VueWrapper {
                 Machine Learning Engineer
               </label>
             </div>
+            <!--v-if-->
           </div>
+          <!--v-if-->
           <button
             class=""
           >
@@ -3302,13 +5366,31 @@ VueWrapper {
   },
   "__setProps": [Function],
   "componentVM": Object {
-    "areas": Array [],
-    "description": "",
-    "firstName": "",
+    "areas": Object {
+      "isValid": true,
+      "value": Array [],
+    },
+    "clearError": [Function],
+    "description": Object {
+      "isValid": true,
+      "value": "",
+    },
+    "firstName": Object {
+      "isValid": true,
+      "value": "",
+    },
+    "formIsValid": true,
     "formSubmitted": [Function],
     "hasOwnProperty": [Function],
-    "hourlyRate": null,
-    "lastName": "",
+    "hourlyRate": Object {
+      "isValid": true,
+      "value": null,
+    },
+    "lastName": Object {
+      "isValid": true,
+      "value": "",
+    },
+    "validateForm": [Function],
   },
   "isDisabled": [Function],
   "rootVM": Object {},
@@ -3325,6 +5407,7 @@ VueWrapper {
         id="firstname"
         type="text"
       />
+      <!--v-if-->
     </div>
     <div
       class="form-control"
@@ -3338,6 +5421,7 @@ VueWrapper {
         id="lastname"
         type="text"
       />
+      <!--v-if-->
     </div>
     <div
       class="form-control"
@@ -3352,6 +5436,7 @@ VueWrapper {
         rows="5"
         type="text"
       />
+      <!--v-if-->
     </div>
     <div
       class="form-control"
@@ -3365,6 +5450,7 @@ VueWrapper {
         id="rate"
         type="number"
       />
+      <!--v-if-->
     </div>
     <div
       class="form-control"
@@ -3408,7 +5494,9 @@ VueWrapper {
           Machine Learning Engineer
         </label>
       </div>
+      <!--v-if-->
     </div>
+    <!--v-if-->
     <button
       class=""
     >

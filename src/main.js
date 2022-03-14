@@ -1,3 +1,5 @@
+'use strict';
+
 import { createApp } from 'vue';
 import router from './router';
 import App from './App.vue';
@@ -8,9 +10,12 @@ import BaseBadge from './components/base-components/BaseBadge.vue';
 
 const app = createApp(App);
 
+app.use(router);
+app.use(store);
+
 //I want this globally available
 app.component('base-card', BaseCard);
 app.component('base-button', BaseButton);
 app.component('base-badge', BaseBadge);
 
-app.use(router).use(store).mount('#app');
+app.mount('#app');
