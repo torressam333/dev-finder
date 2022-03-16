@@ -14,16 +14,17 @@ test('should render html properly', () => {
 test('submits the dev registration form', async () => {
   const first = 'sam';
   const last = 'Bourne';
-  const description = 'I am a government agent who has gone rogue LOL';
+  const desc = 'I am a government agent who has gone rogue LOL';
   const rate = 65;
   const areaValue = 'checked';
+  const areas = ['frontend'];
 
   //Use await to make sure that each change has been applied before we trigger the next.
   //Thus we only make assertions when the DOM has updated
   //Find form fields and set values
   await wrapper.find('#firstname').setValue(first);
   await wrapper.find('#lastname').setValue(last);
-  await wrapper.find('#description').setValue(description);
+  await wrapper.find('#description').setValue(desc);
   await wrapper.find('#rate').setValue(rate);
   //Areas of expertise checkbox
   await wrapper.find('#frontend').setValue(areaValue);
@@ -31,11 +32,15 @@ test('submits the dev registration form', async () => {
 
   form.trigger('submit.prevent');
 
-  // expect(wrapper.emitted('submit')).toStrictEqual({
-  //   first,
-  //   last,
-  //   description,
-  //   rate,
-  //   areaValue,
-  // });
+  expect(wrapper.emitted('save-data')).toEqual([
+    [
+      {
+        first,
+        last,
+        desc,
+        rate,
+        areas,
+      },
+    ],
+  ]);
 });
