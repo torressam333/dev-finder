@@ -1,10 +1,10 @@
 <template>
   <form action="">
-    <div>
+    <div class="form-control">
       <label for="email">Email</label>
       <input type="text" id="email" />
     </div>
-    <div>
+    <div class="form-control">
       <label for="message">Message</label>
       <textarea name="message" id="message" rows="7"></textarea>
     </div>
@@ -23,4 +23,46 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+form {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  display: block;
+  font: inherit;
+  padding: 0.15rem;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(212, 212, 212);
+  border-color: #00658d;
+  outline: none;
+}
+
+.errors {
+  font-weight: bold;
+  color: rgb(173, 17, 17);
+}
+
+.actions {
+  text-align: center;
+}
+</style>
