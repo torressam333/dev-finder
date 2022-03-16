@@ -1,12 +1,17 @@
 <template>
-  <form action="">
+  <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="email">Email</label>
-      <input type="text" id="email" />
+      <input type="text" id="email" v-model="email" />
     </div>
     <div class="form-control">
       <label for="message">Message</label>
-      <textarea name="message" id="message" rows="7"></textarea>
+      <textarea
+        name="message"
+        id="message"
+        rows="7"
+        v-model="message"
+      ></textarea>
     </div>
     <div class="actions">
       <base-button></base-button>
@@ -19,6 +24,36 @@ import BaseButton from '../../components/base-components/BaseButton.vue';
 export default {
   components: {
     BaseButton,
+  },
+  data() {
+    return {
+      email: null,
+      message: null,
+      validForm: true,
+    };
+  },
+  methods: {
+    submitForm() {
+      this.validForm = true;
+
+      this.validateFields();
+
+      if (!this.validForm) {
+        return;
+      }
+
+      const formData = {
+        email: this.email,
+        message: this.message,
+      };
+
+      this.$emit('save-contact-data', formData);
+    },
+    validateFields() {
+      if (!this.email || !this.email.includes('@') || this.message === '') {
+        this.validForm = false;
+      }
+    },
   },
 };
 </script>
