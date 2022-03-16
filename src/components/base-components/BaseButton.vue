@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: 'base-button',
   props: {
     link: {
       type: Boolean,
