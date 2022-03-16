@@ -2,7 +2,7 @@
   <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="email">Email</label>
-      <input type="text" id="email" v-model="email" />
+      <input type="text" id="email" v-model.trim="email" />
     </div>
     <div class="form-control">
       <label for="message">Message</label>
@@ -10,9 +10,12 @@
         name="message"
         id="message"
         rows="7"
-        v-model="message"
+        v-model.trim="message"
       ></textarea>
     </div>
+    <p class="errors" v-if="!validForm">
+      Please provide a valid email address, and non empty message.
+    </p>
     <div class="actions">
       <base-button></base-button>
     </div>
