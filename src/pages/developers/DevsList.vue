@@ -6,7 +6,7 @@
     <base-card>
       <div class="controls">
         <base-button mode="outline">Refresh List</base-button>
-        <base-button link to="/register"> Developer Registration </base-button>
+        <base-button link to="/register"> Developer Registration</base-button>
       </div>
       <ul v-if="hasDevelopers">
         <developer-item
