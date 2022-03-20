@@ -2,15 +2,24 @@
   <section>
     <base-card>
       <header><h2>Received Requests</h2></header>
-      <ul v-if="hasRequests"></ul>
+      <ul v-if="hasRequests">
+        <request-item
+          v-for="request in receivedRequests"
+          :key="request.id"
+          :email="request.email"
+          :message="request.message"
+        ></request-item>
+      </ul>
       <h3 v-else>No Requests Received</h3>
     </base-card>
   </section>
 </template>
 
 <script>
+import RequestItem from '../../components/requests/RequestItem.vue';
 export default {
   name: 'requests-received',
+  components: { RequestItem },
   computed: {
     receivedRequests() {
       //Grab req's using vuex getter (namespaced)
