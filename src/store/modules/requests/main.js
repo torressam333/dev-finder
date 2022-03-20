@@ -1,4 +1,4 @@
-/**Holds all developer related state */
+/**Holds all developer requests related state */
 import actions from './actions.js';
 import getters from './getters.js';
 import mutations from './mutations.js';

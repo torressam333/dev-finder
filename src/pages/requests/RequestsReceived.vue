@@ -23,7 +23,7 @@ export default {
   computed: {
     receivedRequests() {
       //Grab req's using vuex getter (namespaced)
-      return this.$store.getter['requests/requests'];
+      return this.$store.getters['requests/requests'];
     },
     hasRequests() {
       return this.$store.getters['requests/hasRequests'];
