@@ -9,7 +9,30 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'requests-received',
+  computed: {
+    receivedRequests() {
+      //Grab req's using vuex getter (namespaced)
+      return this.$store.getter['requests/requests'];
+    },
+  },
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+header {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 30rem;
+}
+
+h3 {
+  text-align: center;
+}
+</style>
