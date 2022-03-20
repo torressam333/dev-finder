@@ -2,8 +2,8 @@
   <section>
     <base-card>
       <header><h2>Received Requests</h2></header>
-      <ul></ul>
-      <h3>No Requests Received</h3>
+      <ul v-if="hasRequests"></ul>
+      <h3 v-else>No Requests Received</h3>
     </base-card>
   </section>
 </template>
@@ -15,6 +15,9 @@ export default {
     receivedRequests() {
       //Grab req's using vuex getter (namespaced)
       return this.$store.getter['requests/requests'];
+    },
+    hasRequests() {
+      return this.$store.getters['requests/hasRequests'];
     },
   },
 };

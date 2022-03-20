@@ -1,6 +1,10 @@
 export default {
-  requests(state) {
+  requests({ requests }) {
     //Return list of requests
-    return state.requests;
+    return requests;
+  },
+  hasRequests({ requests }) {
+    //Works like a validation rule - (bool)
+    return requests && requests.length > 0;
   },
 };
