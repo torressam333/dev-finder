@@ -3,7 +3,7 @@ export default {
     const newRequest = {
       id: new Date().toDateString(), //placeholder to create unique id per request
       devId: payload.devId,
-      userEmail: payload.email,
+      email: payload.email,
       message: payload.message,
     };
 

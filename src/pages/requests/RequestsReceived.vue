@@ -6,7 +6,7 @@
         <request-item
           v-for="request in receivedRequests"
           :key="request.id"
-          :email="request.userEmail"
+          :email="request.email"
           :message="request.message"
         ></request-item>
       </ul>

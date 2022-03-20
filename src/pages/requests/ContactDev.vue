@@ -48,7 +48,7 @@ export default {
 
       const formData = {
         devId: this.$route.params.id,
-        userEmail: this.email,
+        email: this.email,
         message: this.message,
       };
 
