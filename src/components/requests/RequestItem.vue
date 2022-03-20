@@ -28,3 +28,26 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+li {
+  border: 1px solid #eee;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+a {
+  color: #00658d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #5eb7da;
+}
+
+p {
+  margin: 0.5rem 0 0 0;
+}
+</style>
