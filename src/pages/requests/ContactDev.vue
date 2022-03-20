@@ -42,15 +42,18 @@ export default {
       this.validateFields();
 
       if (!this.validForm) {
+        this.validForm = false;
         return;
       }
 
       const formData = {
-        email: this.email,
+        devId: this.$route.params.id,
+        userEmail: this.email,
         message: this.message,
       };
 
-      this.$emit('save-contact-data', formData);
+      //this.$emit('save-contact-data', formData);
+      this.$store.dispatch('requests/contactDev', formData);
     },
     validateFields() {
       if (!this.email || !this.email.includes('@') || this.message === '') {

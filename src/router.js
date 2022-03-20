@@ -29,6 +29,7 @@ const routes = [
       {
         path: 'contact',
         component: ContactDev, // (/developers/:id/contact)
+        props: true,
       },
     ],
   },
