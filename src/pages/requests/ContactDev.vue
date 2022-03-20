@@ -17,7 +17,7 @@
       Please provide a valid email address, and non empty message.
     </p>
     <div class="actions">
-      <base-button></base-button>
+      <base-button>Contact</base-button>
     </div>
   </form>
 </template>
@@ -54,6 +54,10 @@ export default {
 
       //this.$emit('save-contact-data', formData);
       this.$store.dispatch('requests/contactDev', formData);
+
+      //Navigate away from this page once form is submitted
+      //Use replace so that user cannot navigate back
+      this.$router.replace('/developers');
     },
     validateFields() {
       if (!this.email || !this.email.includes('@') || this.message === '') {
