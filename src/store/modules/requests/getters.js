@@ -1,11 +1,11 @@
 export default {
-  requests({ requests }, getters, rootState, rootGetters) {
-    //Return list of requests
+  requests({ requests }, _, _, rootGetters) {
+    //Return list of requests belonging to specific user
     const devId = rootGetters.userId;
     return requests.filter((request) => request.devId === devId);
   },
-  hasRequests({ requests }) {
+  hasRequests(_, getters) {
     //Works like a validation rule - (bool)
-    return requests && requests.length > 0;
+    return getters.requests && getters.requests.length > 0;
   },
 };
