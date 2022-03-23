@@ -1,5 +1,5 @@
 export default {
-  requests({ requests }, _, _, rootGetters) {
+  requests({ requests }, _, _2, rootGetters) {
     //Return list of requests belonging to specific user
     const devId = rootGetters.userId;
     return requests.filter((request) => request.devId === devId);
