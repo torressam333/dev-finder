@@ -37,8 +37,6 @@ export default {
   },
 
   async loadDevelopers(context) {
-    const userId = context.rootGetters.userId;
-
     //Grab all developer data from Firebase
     const response = await fetch(
       `https://dev-finder-d2956-default-rtdb.firebaseio.com/developers.json`
