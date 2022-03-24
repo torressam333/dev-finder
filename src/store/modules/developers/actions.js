@@ -35,4 +35,36 @@ export default {
       id: userId,
     });
   },
+
+  async loadDevelopers(context) {
+    const userId = context.rootGetters.userId;
+
+    //Grab all developer data from Firebase
+    const response = await fetch(
+      `https://dev-finder-d2956-default-rtdb.firebaseio.com/developers.json`
+    );
+
+    if (!response.ok) {
+      throw Error('Something went wrong');
+    }
+
+    const developers = [];
+
+    for (const key in response) {
+      //Construct a dev based on data in response
+      const dev = {
+        id: key,
+        firstName: response[key].firstName,
+        lastName: response[key].lastName,
+        description: response[key].description,
+        hourlyRate: response[key].hourlyRate,
+        areas: response[key].areas,
+      };
+
+      //Add each dev from FB into our developers array
+      developers.push(dev);
+    }
+
+    context.commit('setDevelopers', developers);
+  },
 };
