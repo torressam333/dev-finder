@@ -21,8 +21,8 @@ export default {
     );
 
     //Returns promise
-    const result = await response.json();
-    console.log(result);
+    //const result = await response.json();
+    // console.log(result);
 
     if (!response.ok) {
       throw Error('Something went wrong');
