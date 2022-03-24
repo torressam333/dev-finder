@@ -5,7 +5,9 @@
   <section>
     <base-card>
       <div class="controls">
-        <base-button mode="outline">Refresh List</base-button>
+        <base-button mode="outline" @click="loadAllDevs"
+          >Refresh List</base-button
+        >
         <base-button link to="/register"> Developer Registration</base-button>
       </div>
       <ul v-if="hasDevelopers">
@@ -41,7 +43,7 @@ export default {
   },
   computed: {
     filteredDevelopers() {
-      const allDevs = this.$store.getters['developers/getAllDevelopers'];
+      const allDevs = this.loadAllDevs();
 
       return allDevs.filter((dev) => {
         for (const area in this.activeFilters) {
@@ -58,9 +60,15 @@ export default {
     },
   },
   methods: {
+    loadAllDevs() {
+      this.$store.dispatch('developers/loadDevelopers');
+    },
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
     },
+  },
+  created() {
+    this.loadAllDevs();
   },
 };
 </script>
