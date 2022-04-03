@@ -8,12 +8,14 @@
         <base-button mode="outline" @click="loadAllDevs"
           >Refresh List</base-button
         >
-        <base-button link to="/register"> Developer Registration</base-button>
+        <base-button v-if="!isDev && !isLoading" link to="/register"
+          >Developer Registration</base-button
+        >
       </div>
       <div v-if="isLoading">
         <base-spinner></base-spinner>
       </div>
-      <ul v-if="hasDevelopers">
+      <ul v-else-if="hasDevelopers">
         <developer-item
           v-for="dev in filteredDevelopers"
           :key="dev.id"
@@ -58,7 +60,8 @@ export default {
       });
     },
     hasDevelopers() {
-      return this.$store.getters['developers/hasDevelopers'];
+      //If we are in the middle of loading, do not show dev
+      return !this.isLoading && this.$store.getters['developers/hasDevelopers'];
     },
     isDev() {
       return this.$store.getters['developers/isDev'];
