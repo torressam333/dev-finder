@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     filteredDevelopers() {
-      const allDevs = this.loadAllDevs();
+      const allDevs = this.$store.getters['developers/getAllDevelopers'];
 
       return allDevs.filter((dev) => {
         for (const area in this.activeFilters) {
