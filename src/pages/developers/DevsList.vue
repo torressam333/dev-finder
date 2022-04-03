@@ -26,6 +26,7 @@
 import BaseButton from '../../components/base-components/BaseButton.vue';
 import DevFilter from '../../components/developers/DevFilter.vue';
 import DeveloperItem from '../../components/developers/DeveloperItem.vue';
+
 export default {
   components: {
     BaseButton,
@@ -39,6 +40,7 @@ export default {
         frontend: true,
         machineLearning: true,
       },
+      isLoading: false,
     };
   },
   computed: {
@@ -60,8 +62,12 @@ export default {
     },
   },
   methods: {
-    loadAllDevs() {
-      this.$store.dispatch('developers/loadDevelopers');
+    async loadAllDevs() {
+      this.isLoading = true;
+      await this.$store.dispatch('developers/loadDevelopers');
+
+      //promise has resolved
+      this.isLoading = false;
     },
     setFilters(updatedFilters) {
       this.activeFilters = updatedFilters;
