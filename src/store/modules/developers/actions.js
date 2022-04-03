@@ -42,21 +42,23 @@ export default {
       `https://dev-finder-d2956-default-rtdb.firebaseio.com/developers.json`
     );
 
+    const responseData = await response.json();
+
     if (!response.ok) {
       throw Error('Something went wrong');
     }
 
     const developers = [];
 
-    for (const key in response) {
-      //Construct a dev based on data in response
+    for (const key in responseData) {
+      //Construct a dev based on data format in response
       const dev = {
         id: key,
-        firstName: response[key].firstName,
-        lastName: response[key].lastName,
-        description: response[key].description,
-        hourlyRate: response[key].hourlyRate,
-        areas: response[key].areas,
+        firstName: responseData[key].firstName,
+        lastName: responseData[key].lastName,
+        description: responseData[key].description,
+        hourlyRate: responseData[key].hourlyRate,
+        areas: responseData[key].areas,
       };
 
       //Add each dev from FB into our developers array
