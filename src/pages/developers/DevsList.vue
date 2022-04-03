@@ -10,6 +10,9 @@
         >
         <base-button link to="/register"> Developer Registration</base-button>
       </div>
+      <div v-if="isLoading">
+        <base-spinner></base-spinner>
+      </div>
       <ul v-if="hasDevelopers">
         <developer-item
           v-for="dev in filteredDevelopers"

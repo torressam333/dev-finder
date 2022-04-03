@@ -32,7 +32,7 @@
   transform-origin: 40px 40px;
 }
 .lds-roller div:after {
-  content: " ";
+  content: ' ';
   display: block;
   position: absolute;
   width: 7px;
@@ -72,3 +72,4 @@
 .lds-roller div:nth-child(5) {
   animation-delay: -0.18s;
 }
+</style>
